@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div id="form">
+        <form id="login-form">
+            <label for="height">height:</label>
+            <input type="text" id="height" name="height" ><br>
+            <label for="Width">Width:</label>
+            <input type="text" id="Width" name="Width"  ><br>
+            <label for="content">height:</label>
+            <input type="text" id="content" name="content" ><br>
+            <label for="padding">padding:</label>
+            <input type="text" id="padding" name="padding"  ><br>
+            <label for="margin">margin:</label>
+            <input type="text" id="margin" name="margin"  ><br>
+            <label for="color">color:</label>
+            <input type="text" id="color" name="color"  ><br>
+            <label for="bgColor">bgColor:</label>
+            <input type="text" id="bgColor" name="bgColor"  ><br>
+            <button>Submit</button>
+        </form>
+    </div>
+    <div class="cnt">
+
+    </div>
+    <script>
+        document.getElementById('login-form').addEventListener('submit',(e)=>{
+            e.preventDefault();
+            let height=document.getElementById('height')
+            let width=document.getElementById('width')
+            let content=document.getElementById('content')
+            let margin=document.getElementById('margin')
+            let padding=document.getElementById('padding')
+            let color=document.getElementById('color')
+            let bgColor=document.getElementById('bgColor')
+
+            let div=document.createElement('div')
+            div.textContent='This is Container'
+            div.style.height=`${}px`
+            div.style.width=
+
+
+        })
+    </script>
+</body>
+</html>

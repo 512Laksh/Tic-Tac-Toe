@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <form id="login-form">
+        
+            <label for="name">name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+        
+
+       
+            <label for="">number:</label>
+            <input type="number" id="number" name="number" required >
+            <br><br>
+
+            <label for="">skills:</label>
+            <input type="text" id="skills" name="skills" required >
+            <br><br>
+        
+         <button>Login</button>
+    </form>
+    <script>
+        let students=[]
+        document.getElementById('login-form').addEventListener('submit',(e)=>{
+            e.preventDefault()
+            let obj={}
+            let name=document.getElementById('name')
+            let id=document.getElementById('number')
+            // console.log(id)
+            let skills=document.getElementById('skills')
+            obj.name=name.value
+            obj.id=id.value
+            obj.skill=[]
+            obj.skill.push(skills.value)
+            students.push(obj)
+            console.log(students)
+            name.value=''
+            id.value=''
+            skills.value=''
+
+        })
+
+    </script>
+</body>
+</html>
