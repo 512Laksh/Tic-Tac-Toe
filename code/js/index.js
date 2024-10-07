@@ -11,7 +11,7 @@ fetch("https://dummyjson.com/products").then((e)=>e.json()).then((e)=>{
         container=container+`
         <div class="product-card">
             <div class="product_img">
-                <img id="product_img" src="${v.images[0]}" alt="${v.title}">
+                <img id="product_img" loading="lazy" src="${v.images[0]}" alt="${v.title}">
             </div>
             <div class='details'>
                 <h3 style="margin-top:10px; margin-bottom:10px">${v.title}</h3>
@@ -24,7 +24,7 @@ fetch("https://dummyjson.com/products").then((e)=>e.json()).then((e)=>{
         `       
     });
 main.innerHTML=container
-// console.log(products)
+
 
 
 
@@ -40,7 +40,7 @@ document.getElementById('search').addEventListener('submit',(e)=>{
             searchCnt+=`
             <div class="product-card">
             <div class="product_img">
-                <img id="product_img" src="${v.images[0]}" alt="${v.title}">
+                <img id="product_img" loading="lazy" src="${v.images[0]}" alt="${v.title}">
             </div>
             <div class='details'>
                 <h3 style="margin-top:10px; margin-bottom:10px">${v.title}</h3>
@@ -57,23 +57,11 @@ document.getElementById('search').addEventListener('submit',(e)=>{
     else{
         alert('no results found')
     }
-    // console.log(searchRes)
 })
 
 document.getElementById('search-bar').addEventListener('change',()=>{
     main.innerHTML=container
 })
-// main.innerHTML=container
-// document.getElementById('search').addEventListener('submit',(e)=>{
-//     e.preventDefault()
-//     let val=document.getElementById('search-bar').value
-//     let saerchRes=products.filter((x)=>{
-//         let a=x.title
-//         a.search(`${val}`)
-//         // console.log(a)
-//     })
-//     console.log(saerchRes)
-// })
 })
 
 function viewmore(id){
